@@ -11,7 +11,7 @@ namespace HomeWork_7_6
         static void Main(string[] args)
         {
             Army army = new Army();
-            army.AddSoldierAndShowArmy();
+            army.SelectSoldiers();
         }
 
         class Army
@@ -29,7 +29,7 @@ namespace HomeWork_7_6
                 _soldiers.Add(new Soldier("Lucas", Armament.MishineGun, MillitaryRank.Colonel));
             }
 
-            public void AddSoldierAndShowArmy()
+            public void SelectSoldiers()
             {
                var soldiers =  _soldiers.Select(soldier => new { Name = soldier.Name, MillitaryRank = MillitaryRank.Corporal});
 
@@ -39,7 +39,6 @@ namespace HomeWork_7_6
                 }
                 Console.ReadKey();
             }
-            
         }
 
         class Soldier
